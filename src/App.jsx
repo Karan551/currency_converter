@@ -2,9 +2,10 @@ import { useState, useRef } from "react";
 import Input from "./Components";
 import useCurrencyInfo from "./Hooks/useCurrencyInfo";
 import Heading from "./Components/Heading";
-
+// import rup from "./assets/images";
 function App() {
-  const backgroundImage = `/src/images/pexels-photo.jpeg`;
+  // const backgroundImage = myImage;
+  const backgroundImage = 'https://images.pexels.com/photos/3532540/pexels-photo-3532540.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2';
 
   // This is amount that pass user that he want to convert.
   // date field
