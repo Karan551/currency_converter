@@ -27,7 +27,7 @@ function Heading() {
   return (
     <>
       <h1 className=" p-4 text-4xl bg-gray-200 rounded-md text-center text-black mb-2">
-        Welcome To Currency <span ref={el}></span> :-
+        Welcome To Currency <span ref={el}></span>
       </h1>
     </>
   );
