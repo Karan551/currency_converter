@@ -1,16 +1,16 @@
-import { useState, useRef } from "react";
+import { useState } from "react";
 import Input from "./Components";
 import useCurrencyInfo from "./Hooks/useCurrencyInfo";
 import Heading from "./Components/Heading";
-// import rup from "./assets/images";
 function App() {
-  // const backgroundImage = myImage;
   const backgroundImage = 'https://images.pexels.com/photos/3532540/pexels-photo-3532540.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2';
 
   // This is amount that pass user that he want to convert.
   // date field
   const [date, setDate] = useState("");
-
+  // To restrict max value of today.
+  const today = new Date().toISOString().split("T")[0];
+ 
   const [amount, setAmount] = useState(0);
   // This is currency that we have to convert another currency.
   const [from, setFrom] = useState("usd");
@@ -89,6 +89,7 @@ function App() {
               active:translate-y-1 -translate-x-0"
                 type="date"
                 value={date}
+                max={today}
                 onChange={(event) => setDate(event.target.value)}
                 required
               />
